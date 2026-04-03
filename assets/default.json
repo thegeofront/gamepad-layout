@@ -1,0 +1,106 @@
+[
+    {
+        "name": "Default",
+        "themeColor": "#00ffc8",
+        "buttons": {
+            "lt": {
+                "label": "Left Trigger",
+                "ox": 192,
+                "oy": 12,
+                "side": "left",
+                "slot": 2
+            },
+            "lb": {
+                "label": "Left Bumper",
+                "ox": 228,
+                "oy": 72,
+                "side": "left",
+                "slot": 3
+            },
+            "guide": {
+                "label": "Xbox Button",
+                "ox": 638,
+                "oy": 114,
+                "side": "left",
+                "slot": 9
+            },
+            "view": {
+                "label": "View",
+                "ox": 544,
+                "oy": 238,
+                "side": "left",
+                "slot": 10
+            },
+            "ls": {
+                "label": "Left Stick",
+                "ox": 312,
+                "oy": 250,
+                "side": "left",
+                "slot": 7
+            },
+            "dpad": {
+                "label": "D-Pad",
+                "ox": 463,
+                "oy": 455,
+                "side": "left",
+                "slot": 11
+            },
+            "rt": {
+                "label": "Right Trigger",
+                "ox": 1088,
+                "oy": -5,
+                "side": "right",
+                "slot": 2
+            },
+            "rb": {
+                "label": "Right Bumper",
+                "ox": 1064,
+                "oy": 63,
+                "side": "right",
+                "slot": 3
+            },
+            "y": {
+                "label": "\"Y\" Button",
+                "ox": 975,
+                "oy": 155,
+                "side": "right",
+                "slot": 5
+            },
+            "x": {
+                "label": "\"X\" Button",
+                "ox": 890,
+                "oy": 246,
+                "side": "right",
+                "slot": 7
+            },
+            "b": {
+                "label": "\"B\" Button",
+                "ox": 1069,
+                "oy": 248,
+                "side": "right",
+                "slot": 6
+            },
+            "menu": {
+                "label": "Menu",
+                "ox": 736,
+                "oy": 240,
+                "side": "right",
+                "slot": 10
+            },
+            "a": {
+                "label": "\"A\" Button",
+                "ox": 969,
+                "oy": 325,
+                "side": "right",
+                "slot": 8
+            },
+            "rs": {
+                "label": "Right Stick",
+                "ox": 811,
+                "oy": 449,
+                "side": "right",
+                "slot": 11
+            }
+        }
+    }
+]
