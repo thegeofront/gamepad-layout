@@ -2,6 +2,9 @@
 
 Tiny browser app to design and export custom gamepad layouts.
 
+## Screenshot
+![Gamepad Layout Generator screenshot](assets/screenshot.png)
+
 ## Features
 - Drag label/anchor positions on canvas
 - Save and load layout configs as JSON
