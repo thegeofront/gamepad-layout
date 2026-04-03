@@ -417,6 +417,13 @@ body {
   display: block;
 }
 
+.credits-logo {
+  width: 18px;
+  height: 18px;
+  display: block;
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
 .credits span {
   font-size: 11px;
   color: var(--text-dim);
