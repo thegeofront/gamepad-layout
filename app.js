@@ -12,7 +12,7 @@ const NUM_SLOTS = 16;
 const SLOT_RANGE = CANVAS_H - 2 * LABEL_PAD_Y;
 const SLOT_STEP = SLOT_RANGE / (NUM_SLOTS - 1);
 
-const LEFT_LINE_END  = 290;
+const LEFT_LINE_END = 290;
 const RIGHT_LINE_END = CANVAS_W - 290;
 
 const LABEL_HIT_W = 160;
@@ -26,20 +26,20 @@ const DEVICES = {
     image: 'assets/xbox.png',
     displayWidth: 840,
     buttonDefs: [
-      { id: 'lt',    name: 'LT',    label: 'Left Trigger',   ox: 192,  oy: 12,  side: 'left'  },
-      { id: 'lb',    name: 'LB',    label: 'Left Bumper',    ox: 228,  oy: 72,  side: 'left'  },
-      { id: 'guide', name: 'Xbox',  label: 'Xbox Button',    ox: 640,  oy: 72,  side: 'left'  },
-      { id: 'view',  name: 'View',  label: 'View',           ox: 510,  oy: 288, side: 'left'  },
-      { id: 'ls',    name: 'LS',    label: 'Left Stick',     ox: 280,  oy: 288, side: 'left'  },
-      { id: 'dpad',  name: 'D-Pad', label: 'D-Pad',          ox: 418,  oy: 510, side: 'left'  },
-      { id: 'rt',    name: 'RT',    label: 'Right Trigger',  ox: 1088, oy: 12,  side: 'right' },
-      { id: 'rb',    name: 'RB',    label: 'Right Bumper',   ox: 1052, oy: 72,  side: 'right' },
-      { id: 'y',     name: 'Y',     label: '"Y" Button',     ox: 942,  oy: 132, side: 'right' },
-      { id: 'x',     name: 'X',     label: '"X" Button',     ox: 872,  oy: 264, side: 'right' },
-      { id: 'b',     name: 'B',     label: '"B" Button',     ox: 1030, oy: 264, side: 'right' },
-      { id: 'menu',  name: 'Menu',  label: 'Menu',           ox: 676,  oy: 288, side: 'right' },
-      { id: 'a',     name: 'A',     label: '"A" Button',     ox: 950,  oy: 382, side: 'right' },
-      { id: 'rs',    name: 'RS',    label: 'Right Stick',    ox: 770,  oy: 510, side: 'right' },
+      { id: 'lt', name: 'LT', label: 'Left Trigger', ox: 192, oy: 12, side: 'left' },
+      { id: 'lb', name: 'LB', label: 'Left Bumper', ox: 228, oy: 72, side: 'left' },
+      { id: 'guide', name: 'Xbox', label: 'Xbox Button', ox: 640, oy: 72, side: 'left' },
+      { id: 'view', name: 'View', label: 'View', ox: 510, oy: 288, side: 'left' },
+      { id: 'ls', name: 'LS', label: 'Left Stick', ox: 280, oy: 288, side: 'left' },
+      { id: 'dpad', name: 'D-Pad', label: 'D-Pad', ox: 418, oy: 510, side: 'left' },
+      { id: 'rt', name: 'RT', label: 'Right Trigger', ox: 1088, oy: 12, side: 'right' },
+      { id: 'rb', name: 'RB', label: 'Right Bumper', ox: 1052, oy: 72, side: 'right' },
+      { id: 'y', name: 'Y', label: '"Y" Button', ox: 942, oy: 132, side: 'right' },
+      { id: 'x', name: 'X', label: '"X" Button', ox: 872, oy: 264, side: 'right' },
+      { id: 'b', name: 'B', label: '"B" Button', ox: 1030, oy: 264, side: 'right' },
+      { id: 'menu', name: 'Menu', label: 'Menu', ox: 676, oy: 288, side: 'right' },
+      { id: 'a', name: 'A', label: '"A" Button', ox: 950, oy: 382, side: 'right' },
+      { id: 'rs', name: 'RS', label: 'Right Stick', ox: 770, oy: 510, side: 'right' },
     ],
   },
   ps5: {
@@ -47,20 +47,42 @@ const DEVICES = {
     image: 'assets/ps5.png',
     displayWidth: 840,
     buttonDefs: [
-      { id: 'l2',     name: 'L2',      label: 'L2 Trigger',   ox: 168,  oy: 11,   side: 'left'  },
-      { id: 'l1',     name: 'L1',      label: 'L1 Bumper',    ox: 200,  oy: 68,   side: 'left'  },
-      { id: 'ps',     name: 'PS',      label: 'PS Button',    ox: 562,  oy: 68,   side: 'left'  },
-      { id: 'create', name: 'Create',  label: 'Create',       ox: 448,  oy: 273,  side: 'left'  },
-      { id: 'ls',     name: 'LS',      label: 'Left Stick',   ox: 246,  oy: 273,  side: 'left'  },
-      { id: 'dpad',   name: 'D-Pad',   label: 'D-Pad',        ox: 367,  oy: 484,  side: 'left'  },
-      { id: 'r2',     name: 'R2',      label: 'R2 Trigger',   ox: 955,  oy: 11,   side: 'right' },
-      { id: 'r1',     name: 'R1',      label: 'R1 Bumper',    ox: 924,  oy: 68,   side: 'right' },
-      { id: 'tri',    name: '△',       label: 'Triangle',     ox: 827,  oy: 125,  side: 'right' },
-      { id: 'sq',     name: '□',       label: 'Square',       ox: 766,  oy: 250,  side: 'right' },
-      { id: 'cir',    name: '○',       label: 'Circle',       ox: 904,  oy: 250,  side: 'right' },
-      { id: 'opts',   name: 'Options', label: 'Options',      ox: 593,  oy: 273,  side: 'right' },
-      { id: 'cross',  name: '✕',       label: 'Cross',        ox: 834,  oy: 362,  side: 'right' },
-      { id: 'rs',     name: 'RS',      label: 'Right Stick',  ox: 676,  oy: 484,  side: 'right' },
+      { id: 'l2', name: 'L2', label: 'L2 Trigger', ox: 168, oy: 11, side: 'left' },
+      { id: 'l1', name: 'L1', label: 'L1 Bumper', ox: 200, oy: 68, side: 'left' },
+      { id: 'ps', name: 'PS', label: 'PS Button', ox: 562, oy: 68, side: 'left' },
+      { id: 'create', name: 'Create', label: 'Create', ox: 448, oy: 273, side: 'left' },
+      { id: 'ls', name: 'LS', label: 'Left Stick', ox: 246, oy: 273, side: 'left' },
+      { id: 'dpad', name: 'D-Pad', label: 'D-Pad', ox: 367, oy: 484, side: 'left' },
+      { id: 'r2', name: 'R2', label: 'R2 Trigger', ox: 955, oy: 11, side: 'right' },
+      { id: 'r1', name: 'R1', label: 'R1 Bumper', ox: 924, oy: 68, side: 'right' },
+      { id: 'tri', name: '△', label: 'Triangle', ox: 827, oy: 125, side: 'right' },
+      { id: 'sq', name: '□', label: 'Square', ox: 766, oy: 250, side: 'right' },
+      { id: 'cir', name: '○', label: 'Circle', ox: 904, oy: 250, side: 'right' },
+      { id: 'opts', name: 'Options', label: 'Options', ox: 593, oy: 273, side: 'right' },
+      { id: 'cross', name: '✕', label: 'Cross', ox: 834, oy: 362, side: 'right' },
+      { id: 'rs', name: 'RS', label: 'Right Stick', ox: 676, oy: 484, side: 'right' },
+    ],
+  },
+  switch: {
+    name: 'Nintendo Switch',
+    image: 'assets/switch.png',
+    displayWidth: 760,
+    buttonDefs: [
+      { id: 'zl', name: 'ZL', label: 'ZL Trigger', ox: 154, oy: 98, side: 'left' },
+      { id: 'l', name: 'L', label: 'L Bumper', ox: 236, oy: 98, side: 'left' },
+      { id: 'minus', name: '-', label: 'Minus', ox: 318, oy: 178, side: 'left' },
+      { id: 'ls', name: 'LS', label: 'Left Stick', ox: 230, oy: 336, side: 'left' },
+      { id: 'dpad', name: 'D-Pad', label: 'D-Pad', ox: 232, oy: 594, side: 'left' },
+      { id: 'capture', name: 'Capture', label: 'Capture', ox: 274, oy: 746, side: 'left' },
+      { id: 'zr', name: 'ZR', label: 'ZR Trigger', ox: 750, oy: 98, side: 'right' },
+      { id: 'r', name: 'R', label: 'R Bumper', ox: 668, oy: 98, side: 'right' },
+      { id: 'plus', name: '+', label: 'Plus', ox: 626, oy: 178, side: 'right' },
+      { id: 'x', name: 'X', label: '"X" Button', ox: 736, oy: 244, side: 'right' },
+      { id: 'y', name: 'Y', label: '"Y" Button', ox: 662, oy: 316, side: 'right' },
+      { id: 'a', name: 'A', label: '"A" Button', ox: 806, oy: 316, side: 'right' },
+      { id: 'b', name: 'B', label: '"B" Button', ox: 736, oy: 388, side: 'right' },
+      { id: 'rs', name: 'RS', label: 'Right Stick', ox: 736, oy: 590, side: 'right' },
+      { id: 'home', name: 'Home', label: 'Home', ox: 684, oy: 746, side: 'right' },
     ],
   },
   keyboard_mouse: {
@@ -68,20 +90,20 @@ const DEVICES = {
     image: 'assets/keyboard_mouse.png',
     displayWidth: 1050,
     buttonDefs: [
-      { id: 'wasd',   name: 'WASD',   label: 'Move',          ox: 155, oy: 200, side: 'left'  },
-      { id: 'shift',  name: 'Shift',  label: 'Sprint',        ox: 55,  oy: 242, side: 'left'  },
-      { id: 'ctrl',   name: 'Ctrl',   label: 'Crouch',        ox: 40,  oy: 285, side: 'left'  },
-      { id: 'space',  name: 'Space',  label: 'Jump',          ox: 305, oy: 300, side: 'left'  },
-      { id: 'tab',    name: 'Tab',    label: 'Map',           ox: 42,  oy: 160, side: 'left'  },
-      { id: 'e',      name: 'E',      label: 'Interact',      ox: 175, oy: 160, side: 'left'  },
-      { id: 'q',      name: 'Q',      label: 'Ability',       ox: 132, oy: 160, side: 'left'  },
-      { id: 'r',      name: 'R',      label: 'Reload',        ox: 198, oy: 160, side: 'left'  },
-      { id: 'f',      name: 'F',      label: 'Melee',         ox: 210, oy: 200, side: 'left'  },
-      { id: 'lmb',    name: 'LMB',    label: 'Fire',          ox: 875, oy: 95,  side: 'right' },
-      { id: 'rmb',    name: 'RMB',    label: 'Aim',           ox: 930, oy: 95,  side: 'right' },
-      { id: 'scroll', name: 'Scroll', label: 'Switch Weapon', ox: 900, oy: 55,  side: 'right' },
-      { id: 'mb4',    name: 'M4',     label: 'Ping',          ox: 860, oy: 200, side: 'right' },
-      { id: 'mb5',    name: 'M5',     label: 'Voice Chat',    ox: 860, oy: 245, side: 'right' },
+      { id: 'wasd', name: 'WASD', label: 'Move', ox: 155, oy: 200, side: 'left' },
+      { id: 'shift', name: 'Shift', label: 'Sprint', ox: 55, oy: 242, side: 'left' },
+      { id: 'ctrl', name: 'Ctrl', label: 'Crouch', ox: 40, oy: 285, side: 'left' },
+      { id: 'space', name: 'Space', label: 'Jump', ox: 305, oy: 300, side: 'left' },
+      { id: 'tab', name: 'Tab', label: 'Map', ox: 42, oy: 160, side: 'left' },
+      { id: 'e', name: 'E', label: 'Interact', ox: 175, oy: 160, side: 'left' },
+      { id: 'q', name: 'Q', label: 'Ability', ox: 132, oy: 160, side: 'left' },
+      { id: 'r', name: 'R', label: 'Reload', ox: 198, oy: 160, side: 'left' },
+      { id: 'f', name: 'F', label: 'Melee', ox: 210, oy: 200, side: 'left' },
+      { id: 'lmb', name: 'LMB', label: 'Fire', ox: 875, oy: 95, side: 'right' },
+      { id: 'rmb', name: 'RMB', label: 'Aim', ox: 930, oy: 95, side: 'right' },
+      { id: 'scroll', name: 'Scroll', label: 'Switch Weapon', ox: 900, oy: 55, side: 'right' },
+      { id: 'mb4', name: 'M4', label: 'Ping', ox: 860, oy: 200, side: 'right' },
+      { id: 'mb5', name: 'M5', label: 'Voice Chat', ox: 860, oy: 245, side: 'right' },
     ],
   },
 };
@@ -171,7 +193,7 @@ function canvasCoords(e) {
   const rect = canvas.getBoundingClientRect();
   return {
     x: (e.clientX - rect.left) * (CANVAS_W / rect.width),
-    y: (e.clientY - rect.top)  * (CANVAS_H / rect.height),
+    y: (e.clientY - rect.top) * (CANVAS_H / rect.height),
   };
 }
 
@@ -227,10 +249,10 @@ function hitTestLabel(cx, cy) {
 function applyThemeColor(hex) {
   const { r, g, b } = hexToRgb(hex);
   const s = document.documentElement.style;
-  s.setProperty('--accent',       hex);
-  s.setProperty('--accent-dim',   `rgba(${r},${g},${b},0.6)`);
-  s.setProperty('--accent-glow',  `rgba(${r},${g},${b},0.15)`);
-  s.setProperty('--border',       `rgba(${r},${g},${b},0.12)`);
+  s.setProperty('--accent', hex);
+  s.setProperty('--accent-dim', `rgba(${r},${g},${b},0.6)`);
+  s.setProperty('--accent-glow', `rgba(${r},${g},${b},0.15)`);
+  s.setProperty('--border', `rgba(${r},${g},${b},0.12)`);
   s.setProperty('--border-focus', `rgba(${r},${g},${b},0.5)`);
 }
 
@@ -313,12 +335,12 @@ function drawLabelLine(id, ly, accent) {
   if (!b || !b.label) return;
 
   const { x: bx, y: by } = toCanvas(b.ox, b.oy);
-  const isLeft  = b.side === 'left';
-  const turnX   = isLeft ? leftTurnX   : rightTurnX;
-  const lineEnd = isLeft ? LEFT_LINE_END  : RIGHT_LINE_END;
-  const isActive  = id === dragBtnId || id === hoveredBtnId;
-  const dotHot    = isActive && (hoveredType === 'dot' || dragType === 'dot');
-  const labelHot  = isActive && (hoveredType === 'label' || dragType === 'label');
+  const isLeft = b.side === 'left';
+  const turnX = isLeft ? leftTurnX : rightTurnX;
+  const lineEnd = isLeft ? LEFT_LINE_END : RIGHT_LINE_END;
+  const isActive = id === dragBtnId || id === hoveredBtnId;
+  const dotHot = isActive && (hoveredType === 'dot' || dragType === 'dot');
+  const labelHot = isActive && (hoveredType === 'label' || dragType === 'label');
 
   ctx.save();
   ctx.lineCap = 'round';
@@ -498,7 +520,7 @@ function buildButtonInputs() {
   container.innerHTML = '';
 
   const buttons = cfg().buttons;
-  const leftEntries  = [];
+  const leftEntries = [];
   const rightEntries = [];
 
   for (const [id, b] of Object.entries(buttons)) {
@@ -510,7 +532,7 @@ function buildButtonInputs() {
   leftEntries.sort((a, b) => a.oy - b.oy);
   rightEntries.sort((a, b) => a.oy - b.oy);
 
-  addGroup(container, 'Left Side',  leftEntries, 'left');
+  addGroup(container, 'Left Side', leftEntries, 'left');
   addGroup(container, 'Right Side', rightEntries, 'right');
 }
 
@@ -816,7 +838,7 @@ function downloadPNG() {
   render();
 
   const link = document.createElement('a');
-  link.download = `${cfg().name.replace(/[^a-z0-9_\- ]/gi, '')|| 'layout'}.png`;
+  link.download = `${cfg().name.replace(/[^a-z0-9_\- ]/gi, '') || 'layout'}.png`;
   link.href = canvas.toDataURL('image/png');
   document.body.appendChild(link);
   link.click();
